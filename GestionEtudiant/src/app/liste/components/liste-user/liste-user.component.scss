@@ -1,0 +1,35 @@
+@import '../../../shared/themes/styles.scss';
+
+div.mat-elevation-z8{
+  width: 100%;
+  height: 80vh;
+  position: absolute;
+  bottom: 0px;
+}
+div.head{
+  display: flex;
+}
+div.user-info{
+  width: 50%;
+  height: 10vh;
+  h1{
+    text-align: center;
+    color: $primary;
+  }
+}
+div.counter{
+  width: 50%;
+  height: 10vh;
+  h1{
+    text-align: center;
+    span.out{
+      color: red;
+      font-size: 2em;
+    }
+  }
+}
+
+table{
+  width: 100%;
+  height: 90%;
+}

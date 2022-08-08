@@ -1,0 +1,41 @@
+<div class="container-title">
+  <h1 matCardTitle >Bienvenu au gestion des étudiants</h1>
+</div>
+<div class="container">
+  <div class="container-description">
+    <div class="container-image">
+      <img src="../../../../assets/image/Educator.png" alt="education">
+    </div>
+  </div>
+  <mat-card>
+    <h2 matCardTitle > Connectez vous! </h2>
+    <form [formGroup]="connexionForm" >
+      <div class="container-field">
+        <mat-form-field appearance="fill" >
+          <mat-label>email</mat-label>
+          <input matInput type="email" formControlName="email">
+          <mat-error *ngIf="connexionForm.get('email')?.errors?.['required']" >ce champ est requis</mat-error>
+          <mat-error *ngIf="connexionForm.get('email')?.errors?.['email']" >entrer un email valide</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="container-field">
+        <mat-form-field appearance="fill" >
+          <mat-label>mot de passe</mat-label>
+          <input type="password" matInput formControlName="mdp" >
+          <mat-error>ce champ est requis</mat-error>
+        </mat-form-field>
+      </div>
+      <div class="confirmation">
+        <button mat-button color="primary" [disabled]="!connexionForm.valid" (click)="onChoiceAction()" >
+          <mat-spinner *ngIf="loading$|async as loading; else connect" diameter="40" ></mat-spinner>
+          <ng-template #connect >
+            <small>se connecter</small>
+          </ng-template>
+        </button>
+      </div>
+      <div class="option">
+        <p>Vous n'avez pas de compte? <a routerLink="/auth/inscription">créer un compte</a> </p>
+      </div>
+    </form>
+  </mat-card>
+</div>

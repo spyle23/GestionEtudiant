@@ -1,0 +1,45 @@
+@import '../../../shared/themes/styles.scss';
+
+mat-form-field {
+  width: 45%;
+  &.full-width {
+    width: 80%;
+    margin-left: 10%;
+  }
+}
+mat-card{
+  mat-card-title{
+    text-align: center;
+    color: $primary;
+  }
+  p{
+    text-align: center;
+  }
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-card {
+  margin: 20px 0;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}
+
+mat-card-actions {
+  text-align: center;
+}
+
+.main-form {
+  padding-bottom: 30px;
+  position: relative;
+}
+
+button{
+  border: 1px solid;
+}

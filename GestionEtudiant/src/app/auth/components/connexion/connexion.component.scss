@@ -1,0 +1,62 @@
+@import '../../../shared/themes/styles.scss';
+
+div.container-title{
+  width: 100%;
+  height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 0;
+  h1{
+    color: $primary;
+    font-size: 2em;
+  }
+}
+
+div.container{
+  height: 80vh;
+  display: flex;
+  margin-top: 0;
+  align-items: center;
+  padding: 20px;
+  div.container-description{
+    width: 60%;
+    img{
+      width: 100%;
+      height: 80%;
+    }
+  }
+}
+
+mat-card{
+  width: 40%;
+  height: 60%;
+  h2{
+    text-align: center;
+    color: $primary;
+  }
+  form{
+    width: 100%;
+    height: 90%;
+    p{
+      margin-top: 20px;
+      text-align: center;
+    }
+    div.container-field{
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+      mat-form-field{
+        width: 100%;
+      }
+    }
+    button{
+      display: block;
+      margin-top: 10px;
+      margin-left: auto;
+      margin-right: auto;
+      border: 2px solid;
+    }
+  }
+
+}
